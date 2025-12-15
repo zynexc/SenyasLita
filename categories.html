@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SenyasLita</title>
+  <link rel="icon" href="senyaslitaico.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <a href="index.html" aria-label="Loading page">
+      <img src="name-logo.png" alt="Logo">
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="section-title">
+    <h1>Categories</h1>
+    <input
+      id="category-search"
+      class="search-input"
+      type="search"
+      placeholder="Search categories..."
+      aria-label="Search categories"
+    />
+  </div>
+
+  <div id="category-grid" class="category-grid">
+    <button class="category-card" data-category="edukasyon">
+      <img class="category-thumb" src="education.png" alt="Edukasyon" />
+      <span>Edukasyon (Education)</span>
+    </button>
+    <button class="category-card" data-category="emosyon">
+      <img class="category-thumb" src="emotion.png" alt="Emosyon" />
+      <span>Emosyon (Emotions)</span>
+    </button>
+    <button class="category-card" data-category="kulay">
+      <img class="category-thumb" src="color.png" alt="Kulay" />
+      <span>Kulay (Colors)</span>
+    </button>
+    <button class="category-card" data-category="numero">
+      <img class="category-thumb" src="numbers.png" alt="Numero" />
+      <span>Numero (Numbers)</span>
+    </button>
+    <button class="category-card" data-category="pamilya">
+      <img class="category-thumb" src="family.png" alt="Pamilya" />
+      <span>Pamilya (Family)</span>
+    </button>
+    <button class="category-card" data-category="pandiwa">
+      <img class="category-thumb" src="verbs.png" alt="Pandiwa" />
+      <span>Pandiwa (Verbs)</span>
+    </button>
+  </div>
+
+  <section id="category-detail" class="hidden">
+    <div class="section-title detail-header">
+      <div class="back-row">
+        <button id="back-to-categories" class="btn secondary">← Back</button>
+        <h2 id="detail-title">Category</h2>
+      </div>
+    </div>
+<!-- start -->
+   <div class="detail-box">
+  <div class="signs-list">
+    <div class="signs-list-item" data-category="pandiwa">
+      <div class="signs-list-content list">
+        <button
+          class="card sign-btn"
+          data-sign="Basa (Read)"
+          data-front="BASA-FV.MOV"
+          data-side="BASA-SV.MOV"
+          data-desc="Gawain ng pag-unawa sa nakasulat na teksto."
+        >
+          Basa (Read)
+        </button>
+        <button
+          class="card sign-btn"
+          data-sign="Lakad (Walk)"
+          data-front="LAKAD-FV.MOV"
+          data-side="LAKAD-SV.MOV"
+          data-desc="Paggalaw gamit ang paa sa mabagal na paraan."
+        >
+          Lakad (Walk)
+        </button>
+        <button
+          class="card sign-btn"
+          data-sign="Makinig (Listen)"
+          data-front="MAKINIG-FV.MOV"
+          data-side="MAKINIG-SV.MOV"
+          data-desc="Pagbibigay-pansin sa tunog o sinasabi."
+        >
+          Makinig (Listen)
+        </button>
+        <button
+          class="card sign-btn"
+          data-sign="Sayaw (Dance)"
+          data-front="SAYAW-FV.MOV"
+          data-side="SAYAW-SV.MOV"
+          data-desc="Paggalaw ng katawan ayon sa musika."
+        >
+          Sayaw (Dance)
+        </button>
+        <button
+          class="card sign-btn"
+          data-sign="Sepilyo (Brush)"
+          data-front="SEPILYO-FV.MOV"
+          data-side="SEPILYO-SV.MOV"
+          data-desc="Paglilinis ng ngipin gamit ang sipilyo."
+        >
+          Sepilyo (Brush)
+        </button>
+        <button
+          class="card sign-btn"
+          data-sign="Sulat (Write)"
+          data-front="SULAT-FV.MOV"
+          data-side="SULAT-SV.MOV"
+          data-desc="Paglalagay ng ideya sa pamamagitan ng titik o simbolo."
+        >
+          Sulat (Write)
+        </button>
+        <button
+          class="card sign-btn"
+          data-sign="Takbo (Run)"
+          data-front="TAKBO-FV.MOV"
+          data-side="TAKBO-SV.MOV"
+          data-desc="Mabilis na paggalaw gamit ang mga paa."
+        >
+          Takbo (Run)
+        </button>
+        <button
+          class="card sign-btn"
+          data-sign="Talon (Jump)"
+          data-front="TALON-FV.MOV"
+          data-side="TALON-SV.MOV"
+          data-desc="Pag-angat ng katawan mula sa lupa."
+        >
+          Talon (Jump)
+        </button>
+        <button
+          class="card sign-btn"
+          data-sign="Tulog (Sleep)"
+          data-front="TULOG-FV.MOV"
+          data-side="TULOG-SV.MOV"
+          data-desc="Kalagayan ng pahinga ng katawan at isipan."
+        >
+          Tulog (Sleep)
+        </button>
+      </div>
+    </div>
+    <!-- keep .signs-list and .detail-box open so other categories nest here -->
+    <div class="signs-list-item" data-category="pamilya">
+      <div class="signs-list-content list">
+        <button class="card sign-btn" data-sign="Ate (Sister)"
+          data-front="ATE-FV.MOV"
+          data-side="ATE-SV.MOV"
+        >
+        Ate (Sister)
+      </button>
+        <button class="card sign-btn" data-sign="Kuya (Brother)"
+          data-front="KUYA-FV.MOV"
+          data-side="KUYA-SV.MOV"
+        >
+        Kuya (Brother)
+      </button>
+        <button class="card sign-btn" data-sign="Lola (Grandmother)"
+          data-front="LOLA-FV.MOV"
+          data-side="LOLA-SV.MOV"
+        >
+        Lola (Grandmother)
+      </button>
+        <button class="card sign-btn" data-sign="Lolo (Grandfather)"
+          data-front="LOLO-FV.MOV"
+          data-side="LOLO-SV.MOV"
+        >
+        Lolo (Grandfather)
+      </button>
+        <button class="card sign-btn" data-sign="Nanay (Mother)"
+          data-front="NANAY-FV.MOV"
+          data-side="NANAY-SV.MOV"
+        >
+        Nanay (Mother)
+      </button>
+        <button class="card sign-btn" data-sign="Pinsan (Cousin)"
+          data-front="PINSAN-FV.MOV"
+          data-side="PINSAN-SV.MOV"
+        >
+        Pinsan (Cousin)
+      </button>
+        <button class="card sign-btn" data-sign="Sanggol (Baby)"
+          data-front="SANGGOL-FV.MOV"
+          data-side="SANGGOL-SV.MOV"
+        >
+        Sanggol (Baby)
+      </button>
+        <button class="card sign-btn" data-sign="Tatay (Father)"
+          data-front="TATAY-FV.MOV"
+          data-side="TATAY-SV.MOV"
+        >
+        Tatay (Father)
+      </button>
+        <button class="card sign-btn" data-sign="Tita (Auntie)"
+          data-front="TITA-FV.MOV"
+          data-side="TITA-SV.MOV"
+        >
+        Tita (Auntie)
+      </button>
+        <button class="card sign-btn" data-sign="Tito (Uncle)"
+          data-front="TITO-FV.MOV"
+          data-side="TITO-SV.MOV"
+        >
+        Tito (Uncle)
+      </button>
+      </div>
+    </div>
+<!-- dito start below -->
+    <div class="signs-list-item" data-category="numero">
+  <div class="signs-list-content list">
+    <button
+      class="card sign-btn"
+      data-sign="Isa (One)"
+      data-front="ISA-FV.MOV"
+      data-side="ISA-SV.MOV"
+    >
+      Isa (One)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Dalawa (Two)"
+      data-front="DALAWA-FV.MOV"
+      data-side="DALAWA-SV.MOV"
+    >
+      Dalawa (Two)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Tatlo (Three)"
+      data-front="TATLO-FV.MOV"
+      data-side="TATLO-SV.MOV"
+    >
+      Tatlo (Three)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Apat (Four)"
+      data-front="APAT-FV.MOV"
+      data-side="APAT-SV.MOV"
+    >
+      Apat (Four)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Lima (Five)"
+      data-front="LIMA-FV.MOV"
+      data-side="LIMA-SV.MOV"
+    >
+      Lima (Five)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Anim (Six)"
+      data-front="ANIM-FV.MOV"
+      data-side="ANIM-SV.MOV"
+    >
+      Anim (Six)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Pito (Seven)"
+      data-front="PITO-FV.MOV"
+      data-side="PITO-SV.MOV"
+    >
+      Pito (Seven)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Walo (Eight)"
+      data-front="SIYAM-FV.MOV"
+      data-side="WALO-SV.MOV"
+    >
+      Walo (Eight)
+    </button>
+
+    <button
+      class="card sign-btn"
+      data-sign="Siyam (Nine)"
+      data-front="SIYAM-FV.MOV"
+      data-side="SIYAM-SV.MOV"
+    >
+      Siyam (Nine)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Sampu (Ten)"
+      data-front="SAMPU-FV.MOV"
+      data-side="SAMPU-SV.MOV"
+    >
+      Sampu (Ten)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Isa (Eleven)"
+      data-front="LABING-ISA-FV.MOV"
+      data-side="LABING-ISA-SV.MOV"
+    >
+      Labing-isa (Eleven)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Dalawa (Twelve)"
+      data-front="LABING-DALAWA-FV.MOV"
+      data-side="LABING-DALAWA-SV.MOV"
+    >
+      Labindalawa (Twelve)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Tatlo (Thirteen)"
+      data-front="LABING-TATLO-FV.MOV"
+      data-side="LABING-TATLO-SV.MOV"
+    >
+      Labintatlo (Thirteen)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Apat (Fourteen)"
+      data-front="LABING-APAT-FV.MOV"
+      data-side="LABING-APAT-SV.MOV"
+    >
+      Labing-apat (Fourteen)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Lima (Fifteen)"
+      data-front="LABING-LIMA-FV.MOV"
+      data-side="LABING-LIMA-SV.MOV"
+    >
+      Labinlima (Fifteen)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Anim (Sixteen)"
+      data-front="LABING-ANIM-FV.MOV"
+      data-side="LABING-ANIM-SV.MOV"
+    >
+      Labing-anim (Sixteen)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Pito (Seventeen)"
+      data-front="LABING-PITO-FV.MOV"
+      data-side="LABING-PITO-SV.MOV"
+    >
+      Labinpito (Seventeen)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Walo (Eighteen)"
+      data-front="LABING-WALO-FV.MOV"
+      data-side="LABING-WALO-SV.MOV"
+    >
+      Labinwalo (Eighteen)
+    </button>
+    <button
+      class="card sign-btn"
+      data-sign="Labing-Siyam (Nineteen)"
+      data-front="LABING-SIYAM-FV.MOV"
+      data-side="LABING-SIYAM-SV.MOV"
+    >
+      Labinsiyam (Nineteen)
+    </button>
+
+    <button
+      class="card sign-btn"
+      data-sign="Dalawampu (Twenty)"
+      data-front="DALAWAMPU-FV.MOV"
+      data-side="DALAWAMPU-SV.MOV"
+    >
+      Dalawampu (Twenty)
+    </button>
+  </div>
+</div>
+
+<!-- end -->
+    <div class="signs-list-item" data-category="kulay">
+      <div class="signs-list-content list">
+        <button class="card sign-btn" data-sign="Abo (Gray)"
+          data-front="ABO-FV.MOV"
+          data-side="ABO-SV.MOV"
+        >
+        Abo (Gray)
+      </button>
+        <button class="card sign-btn" data-sign="Bughaw (Blue)"
+          data-front="BUGHAW-FV.MOV"
+          data-side="BUGHAW-SV.MOV"
+        >
+        Bughaw (Blue)
+      </button>
+        <button class="card sign-btn" data-sign="Dilaw (Yellow)"
+          data-front="DILAW-FV.MOV"
+          data-side="DILAW-SV.MOV"
+        >
+        Dilaw (Yellow)
+      </button>
+        <button class="card sign-btn" data-sign="Itim (Black)"
+          data-front="ITIM-FV.MOV"
+          data-side="ITIM-SV.MOV"
+        >
+        Itim (Black)
+      </button>
+        <button class="card sign-btn" data-sign="Kahel (Orange)"
+          data-front="KAHEL-FV.MOV"
+          data-side="KAHEL-SV.MOV"
+        >
+        Kahel (Orange)
+      </button>
+        <button class="card sign-btn" data-sign="Kayumanggi (Brown)"
+          data-front="KAYUMANGGI-FV.MOV"
+          data-side="KAYUMANGGI-SV.MOV"
+        >
+        Kayumanggi (Brown)
+      </button>
+        <button class="card sign-btn" data-sign="Luntian (Green)"
+          data-front="LUNTIAN-FV.MOV"
+          data-side="LUNTIAN-SV.MOV"
+        >
+        Luntian (Green)
+      </button>
+        <button class="card sign-btn" data-sign="Pula (Red)"
+          data-front="PULA-FV.MOV"
+          data-side="PULA-SV.MOV"
+        >
+        Pula (Red)
+      </button>
+        <button class="card sign-btn" data-sign="Puti (White)"
+          data-front="PUTI-FV.MOV"
+          data-side="PUTI-SV.MOV"
+        >
+        Puti (White)
+      </button>
+        <button class="card sign-btn" data-sign="Rosas (Pink)"
+          data-front="ROSAS-FV.MOV"
+          data-side="ROSAS-SV.MOV"
+        >
+        Rosas (Pink)
+      </button>
+      </div>
+    </div>
+
+    <div class="signs-list-item" data-category="emosyon">
+      <div class="signs-list-content list">
+        <button class="card sign-btn" data-sign="Galit (Mad)"
+          data-front="GALIT-FV.MOV"
+          data-side="GALIT-SV.MOV"
+        >
+        Galit (Mad)
+      </button>
+        <button class="card sign-btn" data-sign="Hiya (Shy)"
+          data-front="HIYA-FV.MOV"
+          data-side="HIYA-SV.MOV"
+          data-desc="nahihiya ata"
+        >
+        Hiya (Shy)
+      </button>
+        <button class="card sign-btn" data-sign="Ipinagmamalaki (Proud)"
+          data-front="IPINAGMAMALAKI-FV.MOV"
+          data-side="IPINAGMAMALAKI-SV.MOV"
+        >
+        Ipinagmamalaki (Proud)
+      </button>
+        <button class="card sign-btn" data-sign="Iyak (Cry)"
+          data-front="IYAK-FV.MOV"
+          data-side="IYAK-SV.MOV"
+        >
+        Iyak (Cry)
+      </button>
+        <button class="card sign-btn" data-sign="Kaba (Nervous)"
+          data-front="KABA-FV.MOV"
+          data-side="KABA-SV.MOV"
+        >
+        Kaba (Nervous)
+      </button>
+        <button class="card sign-btn" data-sign="Malungkot (Sad)"
+          data-front="MALUNGKOT-FV.MOV"
+          data-side="MALUNGKOT-SV.MOV"
+        >
+        Malungkot (Sad)
+      </button>
+        <button class="card sign-btn" data-sign="Masaya (Happy)"
+          data-front="MASAYA-FV.MOV"
+          data-side="MASAYA-SV.MOV"
+        >
+        Masaya (Happy)
+      </button>
+        <button class="card sign-btn" data-sign="Nalilito (Confused)"
+          data-front="NALILITO-FV.MOV"
+          data-side="NALILITO-SV.MOV"
+        >
+        Nalilito (Confused)
+      </button>
+        <button class="card sign-btn" data-sign="Nasasabik (Excited)"
+          data-front="NASASABIK-FV.MOV"
+          data-side="NASASABIK-SV.MOV"
+        >
+        Nasasabik (Excited)
+      </button>
+        <button class="card sign-btn" data-sign="Takot (Afraid)"
+          data-front="TAKOT-FV.MOV"
+          data-side="TAKOT-SV.MOV"
+        >
+        Takot (Afraid)
+      </button>
+      </div>
+    </div>
+
+    <div class="signs-list-item" data-category="edukasyon">
+      <div class="signs-list-content list">
+        <button class="card sign-btn" data-sign="Agham (Science)"
+          data-front="AGHAM-FV.MOV"
+          data-side="AGHAM-SV.MOV"
+        >
+        Agham (Science)
+      </button>
+        <button class="card sign-btn" data-sign="Araling Panlipunan (Social Studies)"
+          data-front="ARALING-PANLIPUNAN-FV.MOV"
+          data-side="ARALING-PANLIPUNAN-SV.MOV"
+        >
+        Araling Panlipunan (Social Studies)
+      </button>
+        <button class="card sign-btn" data-sign="Filipino (Filipino)"
+          data-front="FILIPINO-FV.MOV"
+          data-side="FILIPINO-SV.MOV"
+          data-desc="Asignaturang nakatuon sa paglinang ng wikang pambansa at panitikan ng Pilipinas."
+        >
+        Filipino (Filipino)
+      </button>
+        <button class="card sign-btn" data-sign="Ingles (English)"
+          data-front="INGLES-FV.MOV"
+          data-side="INGLES-SV.MOV"
+        >
+        Ingles (English)
+      </button>
+        <button class="card sign-btn" data-sign="Kompyuter (Computer)"
+          data-front="KOMPYUTER-FV.MOV"
+          data-side="KOMPYUTER-SV.MOV"
+        >
+        Kompyuter (Computer)
+      </button>
+        <button class="card sign-btn" data-sign="Pagsusulit (Exam)"
+          data-front="PAGSUSULIT-FV.MOV"
+          data-side="PAGSUSULIT-SV.MOV"
+        >
+        Pagsusulit (Exam)
+      </button>
+        <button class="card sign-btn" data-sign="Pagtataya (Quiz)"
+          data-front="PAGTATAYA-FV.MOV"
+          data-side="PAGTATAYA-SV.MOV"
+        >
+        Pagtataya (Quiz)
+      </button>
+        <button class="card sign-btn" data-sign="Pilosopiya (Philosophy)"
+          data-front="PILOSOPIYA-FV.MOV"
+          data-side="PILOSOPIYA-SV.MOV"
+        >
+        Pilosopiya (Philosophy)
+      </button>
+        <button class="card sign-btn" data-sign="Takdang Aralin (Assignment)"
+          data-front="TAKDANG-ARALIN-FV.MOV"
+          data-side="TAKDANG-ARALIN-SV.MOV"
+        >
+        Takdang Aralin (Assignment)
+      </button>
+      </div>
+    </div>
+    </div>
+  </div>
+      </div>
+</main>
+
+<div class="modal" id="sign-modal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="close-modal" aria-label="Isara">×</button>
+    <div class="section-title">
+      <div class="breadcrumbs">
+        <span id="modal-sign-name">Sign</span>
+      </div>
+      <div class="tabs" data-tab-group>
+        <button class="tab active" data-view="front">Front View</button>
+        <button class="tab" data-view="side">Side View</button>
+      </div>
+    </div>
+    <div class="sign-layout">
+      <div class="video-shell">
+        <video data-view muted src="hearingofgad.mp4 "></video>
+      </div>
+      <div class="card">
+        <h2 id="modal-sign-title">Sign</h2>
+        <p id="modal-sign-desc">Ilagay dito ang paglalarawan o gabay para sa kilos ng senyas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-space"></div>
+<script src="script.js"></script>
+</body>
+</html>
